@@ -2,8 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import productRoutes from "./routes/productRoute.js"; // ✅ Pastikan pakai '.js' di akhir
+import productRoutes from "./routes/productRoute.js"; 
 import categoryRoutes from "./routes/categoryRoute.js";
+import authRoutes from "./routes/authRoute.js"; // ✅ Tambahkan import untuk auth
 
 dotenv.config();
 
@@ -16,7 +17,8 @@ app.use(express.json());
 
 // Routes
 app.use("/products", productRoutes);
-app.use("/categories", categoryRoutes)
+app.use("/categories", categoryRoutes);
+app.use("/auth", authRoutes); // ✅ Tambahkan rute autentikasi
 
 // MongoDB Connection
 mongoose

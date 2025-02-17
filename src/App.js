@@ -32,6 +32,7 @@ function App() {
           <Route path='auth' element={<SignIn/>}/>
           <Route path="/" element={<HomePage/>}/>
           <Route path='admin' element={<AdminDashboard/>}/>
+          <Route path='dashboard' element={<HomePage/>}/>
         </Routes>
       </Router>
     </>

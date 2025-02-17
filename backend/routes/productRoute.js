@@ -8,4 +8,5 @@ router.get("/fetch/:id", getProductById);
 router.post("/create", postProducts);
 router.put("/update/:id", updateProduct);
 router.delete("/delete/:id", deleteProduct)
+
 export default router; // ✅ Gunakan 'export default' untuk ES Module
